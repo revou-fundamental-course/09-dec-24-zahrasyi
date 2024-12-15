@@ -3,10 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Travel Agent Website</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>test 1</h1>
-    <h2><i>test 2</i></h2>
+
+ <!-- Navigation Section -->
+ <nav>
+    <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#packages">Our Packages</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+</nav>
+
+    <!-- Home: Banner Section -->
+    <header>
+        <div class="banner">
+            <div class="slides">
+                <div class="slide image">
+                    <img src="image/image1.jpg" alt="Slide 1">
+                </div>
+                <div class="slide image">
+                    <img src="image/image2.jpg" alt="Slide 2">
+                </div>
+                <div class="slide image">
+                    <img src="image/image3.jpg" alt="Slide 3">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Our Package Section -->
+    <main>
+        <section class="packages">
+            <h2>Our Packages</h2>
+            <div class="package">
+                <img src="image/beach.jpg" alt="Beach Getaway">
+                <h3>Beach Getaway</h3>
+                <p>Enjoy a sunny vacation on pristine beaches!</p>
+            </div>
+            <div class="package">
+                <img src="image/mountain.jpg" alt="Mountain Adventure">
+                <h3>Mountain Adventure</h3>
+                <p>Explore the beauty of mountains and nature trails!</p>
+            </div>
+            <div class="package">
+                <img src="image/city.jpg" alt="City Escape">
+                <h3>City Escape</h3>
+                <p>Discover the wonders of the city!</p>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="destination">Travel Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
