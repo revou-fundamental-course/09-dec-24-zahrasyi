@@ -3,76 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Agent Website</title>
+    <title>Travel Agency</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-
- <!-- Navigation Section -->
- <nav>
-    <ul class="nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#packages">Our Packages</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-    </ul>
-</nav>
-
-    <!-- Home: Banner Section -->
+    <!-- Header -->
     <header>
-        <div class="banner">
-            <div class="slides">
-                <div class="slide image">
-                    <img src="image/image1.jpg" alt="Slide 1">
-                </div>
-                <div class="slide image">
-                    <img src="image/image2.jpg" alt="Slide 2">
-                </div>
-                <div class="slide image">
-                    <img src="image/image3.jpg" alt="Slide 3">
-                </div>
-            </div>
-        </div>
+        <nav>
+            <div class="logo">vacation.co</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Package</a></li>
+                <li><a href="#">Call Us</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Our Package Section -->
-    <main>
-        <section class="packages">
-            <h2>Our Packages</h2>
-            <div class="package">
-                <img src="image/beach.jpg" alt="Beach Getaway">
-                <h3>Beach Getaway</h3>
-                <p>Enjoy a sunny vacation on pristine beaches!</p>
+    <!-- Main Content -->
+    <section class="hero">
+        <h1>Your Trusted Travel Agent's</h1> 
+        <p>Your happiness is our happiness</p>
+    </section>
+
+    <!-- Content Section -->
+    <div class="container">
+        <!-- Image & Quote -->
+        <div class="left-section">
+            <div class="image-placeholder">
+                <img src="image/amy-humphries-2M_sDJ_agvs-unsplash.jpg" alt="Image Placeholder">
             </div>
-            <div class="package">
-                <img src="image/mountain.jpg" alt="Mountain Adventure">
-                <h3>Mountain Adventure</h3>
-                <p>Explore the beauty of mountains and nature trails!</p>
-            </div>
-            <div class="package">
-                <img src="image/city.jpg" alt="City Escape">
-                <h3>City Escape</h3>
-                <p>Discover the wonders of the city!</p>
-            </div>
-        </section>
+            <p><em>"Traveling – it leaves you speechless, then turns you into a storyteller."</em></p>
+            <p class="author">Jyme lyn beatty<br><small>journalist, 28</small></p>
+        </div>
 
-        <!-- Call to Action Section -->
-        <section class="contact">
-            <h2>Contact Us</h2>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+        
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+        <!-- Contact Form -->
+        <div class="right-section">
+            <h3>Contact Us</h3>
+            <p>Sales will contact you within 24 hours after we receive your data. <br><small>Rest assured! We will store this data securely and in accordance with our policy</small></p>
+            <form id="contact-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="First and last name" required>
 
-                <label for="destination">Travel Destination:</label>
-                <input type="text" id="destination" name="destination" required>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" placeholder="example@email.com" required>
 
-                <button type="submit">Submit</button>
+                <label for="interest">What are you interested in?</label>
+                <select id="interest">
+                    <option value="" disabled selected>Select option</option>
+                    <option value="travel">Travel Packages</option>
+                    <option value="support">Support</option>
+                    <option value="others">Others</option>
+                </select>
+
+                <button type="submit">submit</button>
             </form>
-        </section>
-    </main>
+        </div>
+    </div>
 
-    <script src="js/script.js"></script>
+
+   
+    
+
+
+    <!-- Features Section -->
+    <section class="features">
+        <h4>Take this opportunity to learn about our top features. <br> <small>Each solution is crafted to deliver the best experience and real results for you.</small></h4>
+        <div class="feature-list">
+            <div class="feature-item">
+                <span class="circle">1</span>
+                <p><strong>Convenience at Your Fingertips</strong> <br> Enjoy a practical and efficient service that allows you to meet all your needs in just a few easy steps</p>
+            </div>
+            <div class="feature-item">
+                <span class="circle">2</span>
+                <p><strong>Reliable Services You Can Trust</strong> <br> Our professional team is ready to assist you anytime with the best and most responsive solutions tailored to your needs</p>
+            </div>
+            <div class="feature-item">
+                <span class="circle">3</span>
+                <p><strong>Affordable Prices, Guaranteed Quality</strong> <br> We offer the best deals at competitive prices without compromising the quality of service you receive</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 

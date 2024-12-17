@@ -1,104 +1,262 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Resetting some default browser styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-h2 {
-    text-align: center;
-    margin-top: 20px;
+/* Global Styles */
+body {
+    font-family: 'poppins', sans-serif;
+    background-color: #F5F5DC;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Banner Section */
-.banner {
-    position: relative;
-    overflow: hidden;
-    height: 300px;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+}
+
+.container {
     display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
 }
 
-.slide.image img {
+header {
+    background-color: #40E0D0;
+    color: white;
+    padding: 1rem 2rem;
+    position: fixed;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
-/* Our Packages Section */
-.packages {
-    padding: 20px;
-    background-color: #f9f9f9;
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+nav ul {
+    list-style: none; /* Hilangkan bullet list */
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFDAB9;
+    text-decoration: dashed;
+}
+
+/* Hero Section */
+.hero {
+    background: url(../image/beach.jpg) no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
     text-align: center;
+    padding: 2rem;
+    font-family: 'Roboto', sans-serif;
 }
 
-.package {
-    margin: 15px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: inline-block;
-    width: 300px;
-    vertical-align: top;
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #f1f1f1;
 }
 
-.package img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
+.hero p {
+
+    font-size: 1.2rem;
 }
 
-/* Contact Section */
-.contact {
-    padding: 20px;
+/* Left Section */
+.left-section {
+    flex: 1;
+    max-width: 50%;
     background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-placeholder {
     text-align: center;
+    margin-bottom: 1rem;
+}
+
+.image-placeholder img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.left-section p {
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+.author {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.author small {
+    color: #777;
+}
+
+/* Right Section */
+.right-section {
+    flex: 1;
+    max-width: 40%;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.right-section p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 form {
-    max-width: 400px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 label {
-    margin-bottom: 5px;
-    text-align: left;
+    font-size: 1rem;
 }
 
-input {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+input, select, button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 2px solid #FFDAB9;
+    border-radius: 4px;
+    transition: border 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #40E0D0;
 }
 
 button {
-    padding: 10px;
-    background-color: #007BFF;
-    color: #fff;
+    background-color: #40E0D0;
+    color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #FFDAB9;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .packages {
-        padding: 10px;
+/* Features Section */
+.features {
+    background-color: #fff;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.features h4 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.feature-item {
+    text-align: center;
+    background-color: #F5F5DC;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.circle {
+    display: inline-block;
+    background-color: #40E0D0;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-item p {
+    font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 2rem;
     }
 
-    .contact {
-        padding: 10px;
+    .left-section, .right-section {
+        max-width: 100%;
     }
 
-    .package {
-        width: 100%;
+    .hero h1 {
+        font-size: 2.5rem;
     }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    
 }
